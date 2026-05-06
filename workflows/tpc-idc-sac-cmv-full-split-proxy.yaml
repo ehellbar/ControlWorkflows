@@ -11,13 +11,13 @@ roles:
       merger_port: 29950
       merger_port_2: 29952
     enabled: "{{ util.SuffixInRange(it, 'alio2-cr1-flp', '001', '072') }}"
-    include: "{{ dpl.GenerateFromUri('tpc-cmv-split-proxy') }}"
+    include: "{{ dpl.GenerateFromUri('tpc-idc-cmv-a-split-proxy') }}"
   - name: tpc-idc-c
     defaults:
       merger_port: 29950
       merger_port_2: 29952
     enabled: "{{ util.SuffixInRange(it, 'alio2-cr1-flp', '073', '144') }}"
-    include: "{{ dpl.GenerateFromUri('tpc-cmv-split-proxy') }}"
+    include: "{{ dpl.GenerateFromUri('tpc-idc-cmv-c-split-proxy') }}"
   - name: tpc-sac
     defaults:
       merger_port: 29951
